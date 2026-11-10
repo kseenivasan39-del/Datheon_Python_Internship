@@ -1,0 +1,122 @@
+{
+    "bot_name": "Datheon Assistant",
+    "version": "1.0",
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "\\b(hi|hello|hey|greetings|morning|afternoon|evening)\\b",
+                "^hi$",
+                "^hello$"
+            ],
+            "keywords": ["hi", "hello", "hey", "hola", "sup", "greetings"],
+            "responses": [
+                "Hello! Welcome to Datheon Customer & Product Support. How can I assist you today?",
+                "Hi there! How can I help you with our products and services today?",
+                "Greetings! I'm here to help answer questions about business hours, product FAQs, pricing, and support."
+            ]
+        },
+        {
+            "tag": "business_hours",
+            "patterns": [
+                "\\b(business|office|working|operating)\\s*(hours|timing|time)\\b",
+                "\\bwhen\\s+are\\s+you\\s+(open|closed)\\b",
+                "\\bopening\\s+(hours|times)\\b",
+                "\\bwhat\\s+time\\s+do\\s+you\\s+(open|close)\\b"
+            ],
+            "keywords": ["hours", "timings", "open", "close", "operating", "working"],
+            "responses": [
+                "Our business hours are Monday through Friday, 9:00 AM - 6:00 PM EST. We are closed on weekends and major public holidays.",
+                "We are open Mon - Fri from 9:00 AM to 6:00 PM EST. For urgent off-hours inquiries, email us at support@datheon.example.com."
+            ]
+        },
+        {
+            "tag": "location_contact",
+            "patterns": [
+                "\\b(where\\s+(are|is)\\s+(you|your\\s+office|your\\s+hq|located)|address|headquarters)\\b",
+                "\\b(contact|email|phone|reach)\\s*(number|support|details|info)?\\b"
+            ],
+            "keywords": ["location", "located", "address", "contact", "email", "phone", "headquarters", "call", "office"],
+            "responses": [
+                "Our global headquarters is at 100 Innovation Boulevard, Tech Park, Suite 400. You can reach our support team at support@datheon.example.com or call +1 (800) 555-DATA.",
+                "You can contact us via email at support@datheon.example.com or call our hotline at +1 (800) 555-DATA (Mon-Fri, 9am - 6pm EST)."
+            ]
+        },
+        {
+            "tag": "pricing_plans",
+            "patterns": [
+                "\\b(how\\s+much|cost|price|pricing|subscription|plans|fee|rates)\\b",
+                "\\b(is\\s+there\\s+a\\s+free\\s+(tier|trial))\\b"
+            ],
+            "keywords": ["price", "pricing", "cost", "subscription", "plans", "trial", "free", "tier"],
+            "responses": [
+                "We offer three flexible tiers:\n  • Starter: Free 14-day trial (basic API access & community support)\n  • Professional: $49/month (unlimited projects, priority ticketing)\n  • Enterprise: Custom pricing with dedicated account management and SLA guarantees.",
+                "Our pricing starts with a free 14-day trial! Professional plans are $49/month, and custom Enterprise options are available upon request."
+            ]
+        },
+        {
+            "tag": "product_features",
+            "patterns": [
+                "\\b(what\\s+(do|does)\\s+(you|datheon)\\s+(do|offer)|products?|features?|services?)\\b",
+                "\\b(what\\s+can\\s+you\\s+do)\\b"
+            ],
+            "keywords": ["product", "products", "features", "services", "capabilities", "offer"],
+            "responses": [
+                "Datheon builds autonomous AI developer utilities, predictive analytics engines, and workflow automation suites. Our core modules include data pipelines, real-time analytics, and automated developer tooling.",
+                "Our product suite covers:\n  1. Real-time Analytics & Valuation Engine\n  2. Automated Workflow & File Management\n  3. Conversational AI Support Assistants\nWould you like more details on any specific module?"
+            ]
+        },
+        {
+            "tag": "refund_policy",
+            "patterns": [
+                "\\b(refund|return|money\\s*back|cancellation|cancel\\s*(my)?\\s*subscription)\\b"
+            ],
+            "keywords": ["refund", "cancel", "cancellation", "return", "policy", "moneyback"],
+            "responses": [
+                "We provide a 30-day money-back guarantee for all new annual subscriptions. You can also cancel your monthly plan at any time through your account billing portal without cancellation penalties."
+            ]
+        },
+        {
+            "tag": "technical_support",
+            "patterns": [
+                "\\b(bug|error|issue|problem|broken|down|not\\s+working|crash|troubleshoot)\\b",
+                "\\b(api\\s+down|server\\s+error)\\b"
+            ],
+            "keywords": ["bug", "error", "issue", "crash", "down", "broken", "troubleshoot", "problem"],
+            "responses": [
+                "Sorry to hear you're experiencing technical difficulties! Please ensure you are running the latest software release. You can check real-time service uptime at status.datheon.example.com or open a ticket at support@datheon.example.com with log traces.",
+                "To resolve technical issues:\n  1. Check your internet connection & API credentials.\n  2. Review our documentation at docs.datheon.example.com.\n  3. Email our tech support team at support@datheon.example.com."
+            ]
+        },
+        {
+            "tag": "feedback_thanks",
+            "patterns": [
+                "\\b(thank|thanks|thank\\s+you|appreciate\\s+it|great|awesome|helpful)\\b"
+            ],
+            "keywords": ["thank", "thanks", "helpful", "appreciate", "awesome", "great"],
+            "responses": [
+                "You're very welcome! Let me know if there's anything else I can help with.",
+                "Glad to be of assistance! Feel free to ask any other questions."
+            ]
+        },
+        {
+            "tag": "exit",
+            "patterns": [
+                "\\b(bye|goodbye|exit|quit|see\\s+you|leave|end)\\b",
+                "^bye$",
+                "^exit$",
+                "^quit$"
+            ],
+            "keywords": ["bye", "goodbye", "exit", "quit", "leave"],
+            "responses": [
+                "Thank you for contacting Datheon Support! Have a wonderful day ahead. Goodbye!",
+                "Goodbye! Reach out anytime you need assistance with Datheon products."
+            ]
+        }
+    ],
+    "fallbacks": [
+        "I'm not quite sure I understood that. You can ask about our 'business hours', 'pricing plans', 'product features', or 'contact support'.",
+        "Could you rephrase your question? For example, try asking: 'What are your working hours?' or 'Tell me about product pricing'.",
+        "I don't have an answer for that yet. Type 'help' to see sample queries, or 'support' to get in touch with a human representative."
+    ]
+}
