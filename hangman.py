@@ -88,8 +88,11 @@ HANGMAN_STAGES = [
     """
 ]
 
-# Word bank categorized for replayability
+# Word bank categorized for replayability (includes Datheon custom list)
 WORDS_BY_CATEGORY = {
+    "Datheon Special": [
+        "DATHEON", "PYTHON", "INTERNSHIP", "ALGORITHM", "DEVELOPER"
+    ],
     "Programming": [
         "PYTHON", "VARIABLE", "FUNCTION", "LOOP", "SYNTAX",
         "STRING", "INTEGER", "BOOLEAN", "DICTIONARY", "COMPILER"
