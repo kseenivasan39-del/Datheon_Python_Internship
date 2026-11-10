@@ -1,75 +1,75 @@
-# Datheon Python Internship - Hangman Word Guessing Game
+# Datheon Python Internship Projects
 
-An interactive, modular console-based Hangman game built in Python 3 using only Python's standard library.
-
----
-
-## 📌 Project Overview & Features
-- **Visual ASCII Gallows Art**: Features 7 stages (0 to 6 incorrect guesses) reflecting each incorrect attempt.
-- **Categorized Word Pool**: Randomly picks words across categories (*Programming*, *Animals*, *Countries*, *Science & Tech*).
-- **Duplicate Guess Prevention**: Informs the user if a letter was previously guessed and does not penalize their attempts.
-- **Input Validation**: Rejects numbers, special characters, and multi-letter inputs gracefully.
-- **Attempt Tracking**: Limits incorrect guesses to 6 attempts and displays remaining chances and guessed letters.
-- **Scoreboard & Replay Support**: Tracks wins across consecutive rounds.
+Repository containing completed internship programming tasks for **Datheon Python Internship**.
 
 ---
 
-## 🛠️ Requirements & Tech Stack
-- **Language**: Python 3.x
-- **Standard Library**: `random`, `os`
-- **IDE**: VS Code / PyCharm / Any terminal
+## 📁 Projects Included
+
+1. [Hangman Word Guessing Game (Console)](file:///d:/Programs/Daelton/hangman.py)
+2. [Stock Portfolio Performance Tracker](file:///d:/Programs/Daelton/portfolio_tracker.py)
 
 ---
 
-## 🚀 How to Run the Game
+## 📈 Project 2: Stock Portfolio Performance Tracker
+
+### 📌 Overview & Goal
+Build an investment portfolio tracking utility in Python 3. The program calculates real-time portfolio valuation, tracks percentage gain/loss per holding, and automatically logs transactions and performance snapshots to external CSV files.
+
+### 🛠️ Key Features
+- **Holdings Management**: Add, average down, or sell shares for any stock ticker (e.g. `AAPL`, `NVDA`, `MSFT`, `TSLA`).
+- **Real-Time Market Valuation**: Fetches live quotes via Yahoo Finance API with smooth fallback mechanisms.
+- **Performance Analytics**: Calculates:
+  - Total Invested Capital
+  - Total Current Valuation
+  - Individual Gain / Loss ($ and %)
+  - Portfolio-wide Net Profit / Loss ($ and %)
+- **Automated CSV Persistence**:
+  - `portfolio_performance_log.csv`: Transaction-level audit trail (`BUY`, `SELL`, share counts, prices, timestamps).
+  - `portfolio_summary_snapshots.csv`: Valuation summary snapshots logged on every report view.
+- **Multi-session Storage**: Positions are persistently stored in `portfolio_data.json`.
+
+### 🚀 How to Run the Portfolio Tracker
+
+```bash
+python portfolio_tracker.py
+```
+
+### 📸 Sample Dashboard Output
+
+```text
+===============================================================================================
+                    INVESTMENT PORTFOLIO PERFORMANCE DASHBOARD
+===============================================================================================
+Symbol       Shares   Buy Price     Current     Invested    Cur Value   Gain/Loss($)    Gain(%)
+-----------------------------------------------------------------------------------------------
+AAPL          10.00     $180.00     $225.50    $1,800.00    $2,255.00       +$455.00    +25.28%
+MSFT           5.00     $400.00     $430.20    $2,000.00    $2,151.00       +$151.00     +7.55%
+NVDA          15.00     $115.50     $138.80    $1,732.50    $2,082.00       +$349.50    +20.17%
+-----------------------------------------------------------------------------------------------
+Total Invested Capital : $5,532.50
+Current Portfolio Value: $6,488.00
+Net Total Profit/Loss  : +$955.50 (+17.27%)
+Active Holdings Count  : 3
+===============================================================================================
+✓ Summary snapshot logged to 'portfolio_summary_snapshots.csv'.
+```
+
+---
+
+## 🎮 Project 1: Hangman Word Guessing Game
+
+### 📌 Overview
+An interactive, modular console game implementing string manipulation, sets, and control flow.
+
+### 🛠️ Features
+- **Visual ASCII Gallows Art**: 7 visual stages updating dynamically with each incorrect attempt (max 6 mistakes).
+- **Masked Word Display**: Displays unrevealed letters as underscores (e.g., `_ A _ H E O N`).
+- **Duplicate Guess Prevention**: Informs user of previously entered letters without penalty deduction.
+- **Categorized Word Pool**: Predefined word bank with replayability.
+
+### 🚀 How to Run Hangman
 
 ```bash
 python hangman.py
 ```
-
----
-
-## 📸 Sample Gameplay Preview
-
-```text
-=============================================
- Category: Programming
-=============================================
-
-       +---+
-       |   |
-       O   |
-      /|   |
-           |
-           |
-    =========
-    
-Word: P Y T H _ N
-
-Guessed letters: A, E, H, P, T, Y
-Attempts remaining: 3/6
----------------------------------------------
-Enter a letter guess: O
-
- Great guess! 'O' is in the word.
-
-🎉 CONGRATULATIONS! YOU WON! 🎉
-You correctly revealed the word: PYTHON
-```
-
----
-
-## 📤 Submission Instructions Checklist
-1. **GitHub Repository**:
-   - Initialize git and push to a repository named: `Datheon_Python_Internship`
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: implement console-based hangman game"
-   git remote add origin https://github.com/<your-username>/Datheon_Python_Internship.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. **LinkedIn Share**:
-   - Post a demo screenshot/video of your terminal gameplay.
-   - Tag **@Datheon**.
